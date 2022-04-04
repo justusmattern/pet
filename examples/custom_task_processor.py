@@ -46,7 +46,7 @@ class MRDataProcessor(DataProcessor):
     UNLABELED_FILE_NAME = "mr_train.csv"
 
     # Set this to a list of all labels in the train + test data
-    LABELS = ["positive", "negative"]
+    LABELS = ["1", "2"]
 
     # Set this to the column of the train/test csv files containing the input's text a
     TEXT_A_COLUMN = 1
