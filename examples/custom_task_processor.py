@@ -34,7 +34,7 @@ class MRDataProcessor(DataProcessor):
     TASK_NAME = "mr-reviews"
 
     # Set this to the name of the file containing the train examples
-    TRAIN_FILE_NAME = "mr_train.csv"
+    TRAIN_FILE_NAME = "mr_train50.csv"
 
     # Set this to the name of the file containing the dev examples
     DEV_FILE_NAME = "mr_dev.csv"
@@ -43,7 +43,7 @@ class MRDataProcessor(DataProcessor):
     TEST_FILE_NAME = "mr_test.csv"
 
     # Set this to the name of the file containing the unlabeled examples
-    UNLABELED_FILE_NAME = "mr_train.csv"
+    UNLABELED_FILE_NAME = "mr_train50.csv"
 
     # Set this to a list of all labels in the train + test data
     LABELS = ["positive", "negative"]
