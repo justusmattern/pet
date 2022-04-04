@@ -21,6 +21,7 @@ import random
 from abc import ABC, abstractmethod
 from collections import defaultdict, Counter
 from typing import List, Dict, Callable
+from examples.custom_task_processor import MRDataProcessor
 
 import log
 from pet import task_helpers
@@ -782,6 +783,7 @@ PROCESSORS = {
     "record": RecordProcessor,
     "ax-g": AxGProcessor,
     "ax-b": AxBProcessor,
+    "mr-reviews": MRDataProcessor
 }  # type: Dict[str,Callable[[],DataProcessor]]
 
 TASK_HELPERS = {

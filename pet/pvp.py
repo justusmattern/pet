@@ -21,6 +21,8 @@ from typing import Tuple, List, Union, Dict
 
 import torch
 from transformers import PreTrainedTokenizer, GPT2Tokenizer
+from examples.custom_task_processor import MRDataProcessor
+from examples.custom_task_pvp import MRPVP
 
 from pet.task_helpers import MultiMaskTaskHelper
 from pet.tasks import TASK_HELPERS
@@ -637,4 +639,5 @@ PVPS = {
     'record': RecordPVP,
     'ax-b': RtePVP,
     'ax-g': RtePVP,
+    "mr-reviews": MRPVP
 }
