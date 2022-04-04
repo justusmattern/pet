@@ -29,15 +29,13 @@ class MyTaskPVP(PVP):
     """
 
     # Set this to the name of the task
-    TASK_NAME = "my-task"
+    TASK_NAME = "mr-reviews"
 
     # Set this to the verbalizer for the given task: a mapping from the task's labels (which can be obtained using
     # the corresponding DataProcessor's get_labels method) to tokens from the language model's vocabulary
     VERBALIZER = {
-        "1": ["World"],
-        "2": ["Sports"],
-        "3": ["Business"],
-        "4": ["Tech"]
+        "1": ["great"],
+        "2": ["bad"],
     }
 
     def get_parts(self, example: InputExample):
@@ -59,7 +57,7 @@ class MyTaskPVP(PVP):
             return [self.mask, ':', text_a, text_b], []
         elif self.pattern_id == 1:
             # this corresponds to the pattern [MASK] News: a || (b)
-            return [self.mask, 'News:', text_a], ['(', text_b, ')']
+            return ["This was a ", self.mask, ' movie!', text_a], ['(', text_b, ')']
         else:
             raise ValueError("No pattern implemented for id {}".format(self.pattern_id))
 
